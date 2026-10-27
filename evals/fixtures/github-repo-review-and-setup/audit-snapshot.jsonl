@@ -1,0 +1,23 @@
+{"check":"repo","http":200,"data":{"allow_auto_merge":false,"allow_merge_commit":false,"allow_rebase_merge":false,"allow_squash_merge":true,"allow_update_branch":false,"archived":false,"default_branch":"main","delete_branch_on_merge":true,"description":null,"has_discussions":false,"has_issues":true,"has_projects":true,"has_wiki":true,"homepage":null,"is_template":false,"license":"MIT","owner_type":"User","security_and_analysis":{"dependabot_security_updates":{"status":"disabled"},"secret_scanning":{"status":"enabled"},"secret_scanning_non_provider_patterns":{"status":"disabled"},"secret_scanning_push_protection":{"status":"enabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","topics":[],"viewer_permissions":{"admin":true,"maintain":true,"pull":true,"push":true,"triage":true},"visibility":"public","web_commit_signoff_required":false}}
+{"check":"rulesets","http":200,"data":[]}
+{"check":"effective_rules_default_branch","http":200,"data":[]}
+{"check":"legacy_branch_protection","http":404,"error":"gh: Branch not protected (HTTP 404)"}
+{"check":"actions_permissions","http":200,"data":{"allowed_actions":"all","enabled":true,"sha_pinning_required":false}}
+{"check":"actions_workflow_permissions","http":200,"data":{"can_approve_pull_request_reviews":false,"default_workflow_permissions":"read"}}
+{"check":"actions_fork_pr_approval","http":200,"data":{"approval_policy":"first_time_contributors"}}
+{"check":"workflows","http":200,"data":{"names":[],"total_count":0}}
+{"check":"environments","http":200,"data":{"names":[],"total_count":0}}
+{"check":"actions_secrets","http":200,"data":{"total_count":0}}
+{"check":"dependabot_alerts","http":404,"error":"gh: Vulnerability alerts are disabled. (HTTP 404)"}
+{"check":"dependabot_security_updates","http":200,"data":{"enabled":false,"paused":false}}
+{"check":"private_vulnerability_reporting","http":200,"data":{"enabled":false}}
+{"check":"code_scanning_default_setup","http":200,"data":{"languages":[],"query_suite":"default","state":"not-configured"}}
+{"check":"secret_scanning_alerts_open","http":200,"data":0}
+{"check":"immutable_releases","http":200,"data":{"enabled":false,"enforced_by_owner":false}}
+{"check":"tags","http":200,"data":0}
+{"check":"releases","http":200,"data":0}
+{"check":"community_profile","http":200,"data":{"files":{"code_of_conduct":false,"code_of_conduct_file":false,"contributing":false,"issue_template":false,"license":true,"pull_request_template":false,"readme":true},"health_percentage":28}}
+{"check":"labels","http":200,"data":["bug","documentation","duplicate","enhancement","good first issue","help wanted","invalid","question","wontfix"]}
+{"check":"open_pull_requests","http":200,"data":[{"draft":false,"number":4,"title":"docs: document Antigravity IDE and CLI setup for agent-skills"}]}
+{"check":"collaborators","http":200,"data":[{"login":"LukaszStrz","role_name":"admin"}]}
+{"check":"tree","http":200,"data":{"has_code_of_conduct":false,"has_codeowners":false,"has_contributing":false,"has_dependabot_config":false,"has_directory_build_props":false,"has_editorconfig":false,"has_gitattributes":false,"has_global_json":false,"has_issue_templates":false,"has_nuget_config":false,"has_pr_template":false,"has_security_md":false,"truncated":false,"workflow_files":[]}}

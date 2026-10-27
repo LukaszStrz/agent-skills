@@ -1,0 +1,56 @@
+{
+  "skill_name": "github-repo-review-and-setup",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Audit the GitHub settings on my repo and tell me which best practices I'm missing",
+        "top_k": 3
+      },
+      {
+        "prompt": "Set up branch protection and security features on my new open-source repo",
+        "top_k": 3
+      },
+      {
+        "prompt": "What is actually enabled on this repository? Are rulesets and Dependabot configured?",
+        "top_k": 3
+      },
+      {
+        "prompt": "I'm preparing my .NET library repo for its first NuGet release, so harden the GitHub config first",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Set up a CI pipeline that builds the project and runs our tests on every push",
+        "owner": "ci-cd-and-automation"
+      },
+      {
+        "prompt": "Commit this work and open a pull request",
+        "owner": "git-workflow-and-versioning"
+      },
+      {
+        "prompt": "Check this login handler for SQL injection and weak session handling",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review the GitHub setup of this repo from the captured audit in audit-snapshot.jsonl (you have no network access), and write the findings and an ordered action plan to REPORT.md.",
+      "expected_output": "A REPORT.md with evidence-backed findings, an ordered plan that respects dependency order, approval tiers for risky steps, and no re-proposal of declined or deferred decisions",
+      "files": [
+        "github-repo-review-and-setup"
+      ],
+      "expectations": [
+        "REPORT.md flags the unprotected default branch (no rulesets, legacy branch protection absent) as a high-severity finding and cites the audit evidence for it",
+        "REPORT.md flags Dependabot alerts and security updates being disabled, code scanning not configured, and private vulnerability reporting disabled",
+        "The plan puts CI (or a workflow that reports a status check) before activating a ruleset that requires that check, or explicitly defers the required-check rule until CI exists",
+        "The plan enables immutable releases before the first release and marks ruleset activation and immutable releases as needing explicit per-item approval",
+        "REPORT.md does not propose required signed commits, and does not set up an AI reviewer or the CI/release pipeline now; deferred items are listed as deferred with what blocks them",
+        "REPORT.md lists items the snapshot cannot show (two-factor authentication, nuget.org account state) as unknown or as needing the maintainer, instead of marking them OK",
+        "No settings were changed: the run issued no mutating gh command and made no direct edits other than creating REPORT.md"
+      ]
+    }
+  ]
+}
